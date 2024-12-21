@@ -26,7 +26,6 @@
     "@medusajs/core-flows": "latest",
     "@medusajs/framework": "latest",
     "@medusajs/medusa": "latest",
-    "@medusajs/admin-shared": "latest",
     "@medusajs/notification-sendgrid": "latest",
     "@medusajs/payment-stripe": "latest",
     "@medusajs/types": "latest",

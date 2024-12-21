@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@medusajs/admin-shared": "^2.1.3"
+	}
+}
