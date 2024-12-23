@@ -16,26 +16,38 @@ module.exports = {
                     pages: ["product-view", "variant-view"],
                 },
                 component: async ({ product, variant, setData }) => {
-                    return (
-                        <div>
-                            <h3>Barcode Manager</h3>
-                            <label htmlFor="caseBarcode">Case Barcode:</label>
-                            <input
-                                type="text"
-                                id="caseBarcode"
-                                placeholder="Enter case barcode"
-                                onChange={(e) => setData({ caseBarcode: e.target.value })}
-                            />
-                            <label htmlFor="caseValue">Case Value:</label>
-                            <input
-                                type="number"
-                                id="caseValue"
-                                placeholder="Enter case quantity"
-                                onChange={(e) => setData({ caseValue: e.target.value })}
-                            />
-                        </div>
-                    );
-                },
+                    const div = document.createElement('div');
+                    const h3 = document.createElement('h3');
+                    h3.textContent = 'Barcode Manager';
+
+                    const label1 = document.createElement('label');
+                    label1.htmlFor = 'caseBarcode';
+                    label1.textContent = 'Case Barcode:';
+
+                    const input1 = document.createElement('input');
+                    input1.type = 'text';
+                    input1.id = 'caseBarcode';
+                    input1.placeholder = 'Enter case barcode';
+                    input1.addEventListener('change', (e) => setData({ caseBarcode: e.target.value }));
+
+                    const label2 = document.createElement('label');
+                    label2.htmlFor = 'caseValue';
+                    label2.textContent = 'Case Value:';
+
+                    const input2 = document.createElement('input');
+                    input2.type = 'number';
+                    input2.id = 'caseValue';
+                    input2.placeholder = 'Enter case quantity';
+                    input2.addEventListener('change', (e) => setData({ caseValue: e.target.value }));
+
+                    div.appendChild(h3);
+                    div.appendChild(label1);
+                    div.appendChild(input1);
+                    div.appendChild(label2);
+                    div.appendChild(input2);
+
+                    return div;
+            },
             });
 
             adminApi.createAdminMenu({
