@@ -1,4 +1,5 @@
 import { loadEnv, Modules, defineConfig } from '@medusajs/utils';
+import ProductBarcodeWidget from './custom-widgets/product-barcode-widget';
 import {
   ADMIN_CORS,
   AUTH_CORS,
@@ -44,7 +45,7 @@ const medusaConfig = {
     backendUrl: BACKEND_URL,
     disable: SHOULD_DISABLE_ADMIN,
     widgets: [
-      "./custom-widgets/product-barcode-widget"
+      ProductBarcodeWidget,
     ],
   },
   modules: [

@@ -7,7 +7,6 @@ module.exports = {
     widget: {
         name: "Product Barcode Manager",
         description: "Manage barcodes for products and variants including inventory scanning.",
-
         setup: ({ adminApi }) => {
             adminApi.createAdminWidget({
                 name: "Product Barcode Widget",
