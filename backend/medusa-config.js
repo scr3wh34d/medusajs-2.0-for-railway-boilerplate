@@ -43,6 +43,9 @@ const medusaConfig = {
   admin: {
     backendUrl: BACKEND_URL,
     disable: SHOULD_DISABLE_ADMIN,
+    widgets: [
+      "./custom-widgets/product-barcode-widget"
+    ],
   },
   modules: [
     {
