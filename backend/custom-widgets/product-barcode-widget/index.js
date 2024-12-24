@@ -1,6 +1,6 @@
 // medusajs-v2-widget/index.js
 
-const Medusa = require("@medusajs/sdk");
+const Medusa = require('@medusajs/js-sdk');
 const Quagga = require("quagga");
 
 module.exports = {
